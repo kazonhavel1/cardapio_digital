@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.{html,js}"],
@@ -14,4 +15,5 @@ module.exports = {
   },
   plugins: [],
 }
+
 
