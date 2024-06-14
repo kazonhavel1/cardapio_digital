@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='./Style/output.css'>
     <script src='./scripts/script.js'></script>
 </head>
@@ -16,17 +17,11 @@
 
     <!--Header-->
 
-    <header id="header" class="w-full h-[420px] bg-home bg-cover bg-center">
-        <div class="w-full h-full flex flex-col justify-center items-center">
-        
-            <img src="./utils/logo.png" alt="logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
-        
-        
-            <h1 class = "text-5x1 mt-4 mb-2 font-bold text-white"> Bar M&Z</h1>
-    
-            <span class="text-white font-medium">Bem vindo ao cardápio do nosso Bar!</span>
-
-       </div>
+    <header id="header" class="w-full h-[420px] bg-home bg-cover bg-center flex flex-col justify-center items-center text-center p-4">
+        <img src="./utils/logo.png" alt="logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+        <h1 class="text-5xl mt-4 mb-2 font-bold text-white">Bar M&Z</h1>
+        <span class="text-white font-medium">Bem vindo ao cardápio do nosso Bar!</span>
+    </header>
 
 
     </header>
@@ -34,12 +29,12 @@
     <!--Final Header-->
 
      <!-- Menu de Navegação -->
-     <nav id="navbar" class="bg-amber-900 shadow mb-8 fixed top-0 w-full z-10 hidden">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+     <nav id="navbar" class="bg-yellow-950 shadow mb-8 fixed top-0 w-full z-10 hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-12">
                 <div class="flex">
-                    <div class="sm:flex sm:space-x-8">
-                        <a href="#bebidasalcoolicas" class="hover:border-white text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Bebidas Alcoólicas</a>
+                    <div class="flex space-x-6">
+                        <a href="#bebidasalcoolicas" class="border-transparent hover:border-white hover:text-black text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Bebidas Alcoólicas</a>
                         <a href="#porcoes" class="border-transparent text-white hover:border-white hover:text-black inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Porções</a>
                         <a href="#espetinhos" class="border-transparent text-white hover:border-white hover:text-black inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Espetinhos</a>
                     </div>
@@ -50,146 +45,93 @@
 
     <h2 class="text-4xl font-bold text-center mt-9 mb-6">Bebidas Alcoólicas</h2>
 
-    <!--Início grid bebidas-->
-
-    <div>
-
-        <main id="bebidasalcoolicas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7x1 px-5 mb-16">
-
-        <!--Item-->
-        <div class="flex relative gap-2 border-solid border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100">
-            <img src="./utils/brahma_litrao.png" alt="brahmalitrao" class="w-28 h-28 ronded-md hover:scale-110 duration-200">
-            
-            <div class="flex-grow py-5">
-                <p class="font-bold"> Litrao Brahma</p>
-                <p class="text-sm">Cerveja Pilsen Brahma Garrafa. <br> Quantidade: 1L</p>
-            
-                <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
-                   <p class="font-bold text-xl px-5">R$ 13.00</p>
-                </div>
+    <!-- Grid Bebidas Alcoólicas -->
+<main id="bebidasalcoolicas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7x1 px-5 mb-16">
+    <!-- Item 1 -->
+    <div class="flex relative p-4 gap-2 border-solid border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100 items-center md:p-4 lg:p-6" onclick="mostrarAlerta()">
+        <img src="./utils/brahma_litrao.png" alt="Litrão Brahma" class="w-32 h-32 rounded-md hover:scale-110 duration-200 mx-auto">
+        <div class="flex-grow py-5">
+            <p class="font-bold text-lg">Litrão Brahma</p>
+            <p class="text-sm text-gray-600">Cerveja Pilsen Brahma Garrafa. <br> Quantidade: 1L</p>
+            <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
+                <p class="font-bold text-xl px-5">R$ 13.00</p>
             </div>
         </div>
-        <!--Fim Item-->
-
-         <!--Item-->
-         <div class="flex relative gap-2 border-solid border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100">
-            <img src="./utils/heineken.png" alt="heineken" class="w-28 h-28 ronded-md hover:scale-110 duration-200">
-            
-            <div class="flex-grow py-5">
-                <p class="font-bold"> Heineken 600ml</p>
-                <p class="text-sm">Cerveja Heineken Garrafa. <br> Quantidade: 1L</p>
-            
-                <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
-                   <p class="font-bold text-xl px-5">R$ 13.00</p>
-                </div>
-            </div>
-        </div>
-        <!--Fim Item-->
-        
-
-
-
-        </main>
-
-        <!--Fim grid bebidas-->
     </div>
-
-
-        <div class="text-4xl font-bold text-center mt-9 mb-6">
-            <h2 class="font-bold text-4x1">Porções</h2>
+    
+    <!-- Item 2 -->
+    <div class="flex relative gap-2 border-solid p-4 border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100 items-center md:p-3 lg:p-5" onclick="mostrarAlerta()">
+        <img src="./utils/heineken.png" alt="Heineken 600ml" class="w-32 h-32 rounded-md hover:scale-110 duration-200">
+        <div class="flex-grow py-5">
+            <p class="font-bold text-lg">Heineken 600ml</p>
+            <p class="text-sm text-gray-600">Cerveja Heineken Garrafa. <br> Quantidade: 600ml</p>
+            <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
+                <p class="font-bold text-xl px-5">R$ 13.00</p>
+            </div>
         </div>
-
-        <!--Início grid Porções-->
-
-
-        <div>
-
-            <main id="porcoes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7x1 px-5 mb-16">
+    </div>
     
-            <!--Item-->
-            <div class="flex relative gap-2 border-solid border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100">
-                <img src="./utils/porcao_mandioca.png" alt="pcmandioa" class="w-28 h-28 ronded-md hover:scale-110 duration-200">
-                
-                <div class="flex-grow py-5">
-                    <p class="font-bold"> Porção de Mandioca Frita</p>
-                    <p class="text-sm">Porçao de mandioca frita a óleo e servido em bandeja. <br> Quantidade: 300g (serve até 3 pessoas)</p>
-                
-                    <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
-                       <p class="font-bold text-xl px-5">R$ 25.00</p>
-                    </div>
-                </div>
+</main>
+
+
+<h2 class="text-4xl font-bold text-center mt-9 mb-6">Porções</h2>
+
+<!-- Grid Porções -->
+<main id="porcoes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7x1 px-5 mb-16">
+    <!-- Item 1 -->
+    <div class="flex relative gap-2 border-solid border-4 p-4 rounded-lg hover:scale-110 duration-200 bg-slate-100 items-center md:md:p-3 lg:p-5" onclick="mostrarAlerta()">
+        <img src="./utils/porcao_mandioca.png" alt="Porção de Mandioca Frita" class="w-32 h-32 rounded-md hover:scale-110 duration-200">
+        <div class="flex-grow py-5">
+            <p class="font-bold text-lg">Porção de Mandioca Frita</p>
+            <p class="text-sm text-gray-600">Porção de mandioca frita a óleo e servido em bandeja. <br> Quantidade: 300g (serve até 3 pessoas)</p>
+            <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
+                <p class="font-bold text-xl px-5">R$ 25.00</p>
             </div>
-            <!--Fim Item-->
-            
+        </div>
+    </div>
     
-    
-    
-            </main>
-            <!--Fim grid Porções-->
-        
+</main>
+
+
+<h2 class="text-4xl font-bold text-center mt-9 mb-6">Espetinhos</h2>
+
+<!-- Grid Espetinhos -->
+<main id="espetinhos" class="grid grid-cols-1 p-4 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7x1 px-5 mb-16">
+    <!-- Item 1 -->
+    <div class="flex relative gap-2 border-solid border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100 items-center md:p-3 lg:p-5" onclick="mostrarAlerta()">
+        <img src="./utils/medalhao.jpg" alt="Medalhão" class="w-32 h-32 rounded-md hover:scale-110 duration-200">
+        <div class="flex-grow py-5">
+            <p class="font-bold text-lg">Medalhão</p>
+            <p class="text-sm text-gray-600">Medalhão de frango servido no espeto. <br> Quantidade: 1 (serve até 1 pessoa)</p>
+            <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
+                <p class="font-bold text-xl px-5">R$ 10.00</p>
             </div>
-            
-            <div class="text-4xl font-bold text-center mt-9 mb-6">
-                <h2 class="font-bold text-4x1">Espetinhos</h2>
-            </div>
-
-
-            <!--Início grid espetinhos-->
-
-
-            <div>
-
-                <main id="espetinhos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7x1 px-5 mb-16">
-                
-                <!--Item-->
-                <div class="flex relative gap-2 border-solid border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100">
-                    <img src="./utils/medalhao.jpg" alt="medalhao" class="w-28 h-28 ronded-md hover:scale-110 duration-200">
-
-                    <div class="flex-grow py-5">
-                        <p class="font-bold">Medalhão</p>
-                        <p class="text-sm">Medalhão de frango servido no espeto. <br> Quantidade: 1 (serve até 1 pessoas)</p>
-                    
-                        <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
-                           <p class="font-bold text-xl px-5">R$ 10.00</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Fim Item-->
-
-                <!--Item-->
-                <div class="flex relative gap-2 border-solid border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100">
-                    <img src="./utils/espetinhodequeijo.jpg" alt="queijo" class="w-28 h-28 ronded-md hover:scale-110 duration-200">
-
-                    <div class="flex-grow py-5">
-                        <p class="font-bold">Queijo</p>
-                        <p class="text-sm">Queijo quente feito na Brasa. <br> Quantidade: 1 (serve até 1 pessoas)</p>
-                    
-                        <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
-                           <p class="font-bold text-xl px-5">R$ 8.00</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Fim Item-->
-
-            
-            
-            
-                </main>
-                <!--Fim grid Espetinhos-->
-            </div>
-
-
-        
+        </div>
+    </div>
     
-            <footer class="w-full h-[150px] bg-home bg-cover bg-center">
-                <div class="w-full h-full flex flex-col items-center py-4">
+    <!-- Item 2 -->
+    <div class="flex relative gap-2 border-solid p-4 border-4 rounded-lg hover:scale-110 duration-200 bg-slate-100 items-center md:p-3 lg:p-5" onclick="mostrarAlerta()">
+        <img src="./utils/espetinhodequeijo.jpg" alt="Queijo" class="w-32 h-32 rounded-md hover:scale-110 duration-200">
+        <div class="flex-grow py-5">
+            <p class="font-bold text-lg">Queijo</p>
+            <p class="text-sm text-gray-600">Queijo quente feito na brasa. <br> Quantidade: 1 (serve até 1 pessoa)</p>
+            <div class="flex absolute bottom-0 right-0 gap-2 justify-between mt-3 py-2">
+                <p class="font-bold text-xl px-5">R$ 8.00</p>
+            </div>
+        </div>
+    </div>
+    
+</main>   
+
+            <footer class="w-full h-[200px] bg-home bg-cover bg-center">
+                <div class="w-full h-full flex flex-col items-center py-8">
                     <div class="flex w-full justify-between items-center px-10">
                         <!-- Imagem -->
-                        <img src="./utils/logo.png" alt="logo" class="w-28 h-28 rounded-full shadow-lg hover:scale-110 duration-200">
+                        <img src="./utils/logo.png" alt="logo" class="w-24 h-24 rounded-full shadow-lg hover:scale-110 duration-200">
                         
                         <!-- Texto e Logos -->
                         <div class="flex flex-col items-center">
-                            <h1 class="text-lg text-white text-bold text-center mb-4">Endereço: Rua dos Inconfidentes, Número 221, Betim - MG</h1>
+                            <h1 class="text-medium text-white text-bold text-center mb-4">Endereço: Rua dos Inconfidentes, Número 221, Betim - MG</h1>
                             <div class="flex space-x-6">
                                 <a href="https://maps.app.goo.gl/G3o5v6LPMVMGX8x99"><img src="./utils/maps_png-removebg-preview.png" alt="Logo 1" class="h-10">
                                 <a href="https://api.whatsapp.com/send/?phone=93244449&text&type=phone_number&app_absent=0"><img src="./utils/wpp-removebg-preview.png" alt="Logo 2" class="h-10"></a>
@@ -198,7 +140,7 @@
                     </div>
                 </div>
             </footer>
-
+ 
         
 </body>
 </html>
